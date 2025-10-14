@@ -1,0 +1,123 @@
+/* ==============================
+   Labs Section
+============================== */
+.labs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    font-family: 'Georgia', serif;
+}
+
+.lab-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.lab-card:hover {
+    transform: translateY(-3px);
+}
+
+.lab-card h3 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.lab-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.lab-link {
+    color: var(--secondary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.lab-demo-btn {
+    background: var(--secondary);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.lab-demo-btn:hover {
+    background: #2980b9;
+}
+section#labs {
+    margin-top: -80px; 
+  }
+
+/* ==============================
+   Modal
+============================== */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background: white;
+    margin: 5% auto;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    animation: modalSlideIn 0.3s ease;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.close-modal {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--text);
+    transition: var(--transition);
+}
+
+.close-modal:hover {
+    color: var(--accent);
+}
+@media (max-width: 480px) {
+  .bordered {
+    border: none;
+    background: none;
+    box-shadow: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+   /* Move section higher */
+  section#labs {
+    margin-top: -80px !important; 
+  }
+  section h2 {
+    color: #0b0b0bff !important;
+  }
+}
