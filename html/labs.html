@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laboratory Activities | Gelmark Camilotes</title>
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/navbar-home.css">
+  <link rel="stylesheet" href="../css/labs-modal.css">
+   <link rel="stylesheet" href="../css/footer-responsive.css">
+</head>
+<body>
+
+ 
+  <nav id="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <a href="index.html">Gelmark Camilotes</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="labs.html" class="active">Laboratory Activities</a></li>
+      </ul>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+ 
+  <section class="resume-section bordered">
+    <section id="labs" class="section">
+      <div class="container">
+        <h2 class="section-title" style="font-family: 'Georgia';">Laboratory Activities</h2>
+        <div class="labs-grid">
+
+          <div class="lab-card">
+            <h3>Lab 1: HTML/CSS/Javascript</h3>
+            <p>Hover the container and the text will appear.</p>
+            <div class="lab-links">
+              <button class="lab-demo-btn" data-lab="1" data-video="../videos/first.mp4">View Demo</button>
+            </div>
+          </div>
+
+          <div class="lab-card">
+            <h3>Lab 2: HTML/CSS/Javascript</h3>
+            <p>Light Mode and Dark Mode</p>
+            <div class="lab-links">
+              <button class="lab-demo-btn" data-lab="2" data-video="../videos/wts4.mp4">View Demo</button>
+            </div>
+          </div>
+
+          <div class="lab-card">
+            <h3>Lab 3: HTML/CSS/Javascript</h3>
+            <p>Text appears when clicking "About Me" and disappears when clicking "Showless".</p>
+            <div class="lab-links">
+              <button class="lab-demo-btn" data-lab="3" data-video="../videos/wts2.mp4">View Demo</button>
+            </div>
+          </div>
+
+          <div class="lab-card">
+            <h3>Lab 4: HTML/CSS/Javascript</h3>
+            <p>Text changes when clicking the button.</p>
+            <div class="lab-links">
+              <button class="lab-demo-btn" data-lab="4" data-video="../videos/wts3.mp4">View Demo</button>
+            </div>
+          </div>
+
+          <div class="lab-card">
+            <h3>Lab 5: HTML/CSS</h3>
+            <p>Simple website using minimal CSS and HTML elements.</p>
+            <div class="lab-links">
+              <button class="lab-demo-btn" data-lab="5" data-video="../videos/lab5.mp4">View Demo</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </section>
+
+  
+  <div id="labModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h2 id="modalTitle">Lab Demo</h2>
+      <video id="modalVideo" width="100%" controls autoplay muted loop style="border-radius: 10px;">
+        <source src="" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+  
+  <footer>
+    <p>©2025 Gelmark Camilotes</p>
+  </footer>
+
+
+  <script src="../js/script.js"></script>
+</body>
+</html>

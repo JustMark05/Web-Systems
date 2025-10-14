@@ -1,0 +1,356 @@
+/* ==============================
+   Navigation
+============================== */
+.bordered {
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  padding: 2rem;
+  margin: 3rem auto;
+  width: 90%;
+  background-color: var(--light-bg, #a9ccccff); 
+  box-shadow: 0 4px 8px rgba(13, 22, 95, 0.05);
+}
+
+
+
+
+/* ==============================
+   Sticky / Fixed Navigation
+============================== */
+nav {
+   width: 100%;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Prevent content from hiding under navbar */
+body {
+  padding-top: 80px; 
+}
+
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: transparent; 
+}
+
+
+
+.logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary);
+    text-decoration: none;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: var(--transition);
+    font-family: 'Georgia', serif;
+}
+.nav-links a.active {
+  color: white;
+  font-weight: bold;
+  border-bottom: 2px solid var(--secondary);
+}
+
+.nav-links a:hover {
+    color: var(--secondary);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: var(--primary);
+    margin: 3px 0;
+    transition: var(--transition);
+
+}
+
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+    z-index: 1100;
+  }
+
+.nav-links a.active {
+  background: var(--secondary);
+  color: #fff !important;
+  border-bottom: none;
+}
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100vh;
+    width: 80%;
+    max-width: 320px;
+    background: #ffffffff;
+    box-shadow: 2px 0 12px rgba(0, 0, 0, 0.15);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding: 6rem 1.5rem 2rem;
+    gap: 1rem;
+    transition: left 0.3s ease;
+    z-index: 1050;
+   
+    
+  }
+
+  .nav-links.active {
+    left: 0;
+  }
+
+  .nav-links li {
+    width: 100%;
+    list-style: none;
+   
+  }
+
+  .nav-links a {
+    display: block;
+    width: 100%;
+    padding: 0.9rem 1.2rem;
+    font-size: 1.1rem;
+    color: var(--primary);
+    background: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.25s ease;
+  }
+
+  .nav-links a:hover {
+    background: var(--secondary);
+    color: #fff;
+    transform: translateX(5px);
+  }
+  .hamburger.open span {
+  transform: none !important;
+  opacity: 1 !important;
+}
+
+
+  /* Animated hamburger */
+  .hamburger.open span:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+  }
+  .hamburger.open span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px);
+  }
+  .hamburger span {
+    transition: 0.3s ease;
+  }
+  .nav-toggle .close-icon {
+  display: none;
+}
+
+
+  body.nav-open::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 900;
+    transition: opacity 0.3s ease;
+  }
+}
+
+
+
+
+
+
+/* ==============================
+   Home Section
+============================== */
+#home {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+
+ 
+  margin-top: -80px; 
+  padding-top: 80px; 
+  padding-bottom: 0; 
+  box-sizing: border-box;
+}
+
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    font-family: 'Georgia', serif;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.highlight {
+    color: var(--accent);
+}
+
+.hero-text h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: var(--transition);
+    display: inline-block;
+}
+
+.btn.primary {
+    background: var(--accent);
+    color: white;
+}
+
+.btn.primary:hover {
+    background: #c0392b;
+    transform: translateY(-2px);
+}
+
+.btn.secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.btn.secondary:hover {
+    background: white;
+    color: var(--primary);
+}
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.hero-image img:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .hero-image img {
+    width: 250px;
+    height: 250px;
+     margin-top: -30px; 
+  }
+   
+}
+
+
+.btn {
+ 
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
+}
+
+
+@media (max-width: 768px) {
+  .cta-buttons {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 0.6rem !important;
+    flex-wrap: nowrap !important;   
+    width: 100% !important;
+    margin-top: 0.8rem !important;
+    padding: 0 !important;
+  }
+
+  .cta-buttons .btn {
+    flex: 0 1 auto !important;       
+    white-space: nowrap !important; 
+    padding: 8px 18px !important;    
+    font-size: 0.95rem !important;
+    min-width: 0 !important;
+  }
+
+  
+  .hero-text p {
+    margin-bottom: 0.6rem !important;
+  }
+
+ 
+}
+
+/*For smaller phones*/
+@media (max-width: 420px) {
+  .cta-buttons {
+    gap: 0.35rem !important;
+  }
+
+  .cta-buttons .btn {
+    padding: 7px 12px !important;
+    font-size: 0.88rem !important;
+  }
+  
+}
