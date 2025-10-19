@@ -1,3 +1,17 @@
+
+// ==============================
+// Loading Screen
+// ==============================
+
+ window.addEventListener("load", () => {
+    const preloader = document.getElementById("preloader");
+    setTimeout(() => {
+      preloader.classList.add("hidden");
+      setTimeout(() => preloader.remove(), 800);
+    }, 2000); 
+  });
+
+
 // ==============================
 // Mobile Navigation (Improved)
 // ==============================
@@ -138,3 +152,4 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         document.querySelector(anchor.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
     });
 });
+

@@ -26,7 +26,10 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: var(--text);
-    background-color: #4695a9;
+     background: linear-gradient(to right, #287295ff, #3bd9d9ff);
+
+
+
 }
 
 .container {
@@ -56,4 +59,81 @@ body {
     width: 80px;
     height: 4px;
     background: var(--secondary);
+}
+
+/* ==============================
+   Preloader with Moving Ring
+============================== */
+#preloader {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(135deg, #618cb2ff, #185a87ff);
+  background-size: 200% 200%;
+  animation: bgShift 8s ease-in-out infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+#preloader.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Background gradient animation */
+@keyframes bgShift {
+  0%, 100% { background-position: left top; }
+  50% { background-position: right bottom; }
+}
+
+/* Center container */
+#splash {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.ring {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border: 6px solid rgba(255,255,255,0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 25px rgba(255,255,255,0.25);
+  overflow: hidden;
+}
+
+
+.loader-logo {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  object-fit: cover;
+  z-index: 3;
+}
+
+
+.moving-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  border: 6px solid transparent;
+  border-top: 6px solid white;
+  border-radius: 50%;
+  animation: spin 3s linear infinite; 
+  z-index: 1;
+}
+
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

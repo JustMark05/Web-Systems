@@ -14,13 +14,14 @@
     border-radius: 10px;
     box-shadow: var(--shadow);
     transition: var(--transition);
-    border-left: 6px solid var(--primary); 
+    /* border-left: 6px solid var(--primary);  */
    font-family: 'Georgia', serif;
 }
 
 
 .experience-item:hover {
     transform: translateY(-5px);
+    
 }
 
 .experience-header {
@@ -79,6 +80,8 @@ section#projects {
 
 .project-card:hover {
     transform: translateY(-5px);
+    background: linear-gradient(135deg, #4eba66ff, #c5dbe8ff);
+    
 }
 
 .project-image {

@@ -14,10 +14,12 @@
     border-radius: 10px;
     box-shadow: var(--shadow);
     transition: var(--transition);
+   
 }
 
 .lab-card:hover {
     transform: translateY(-3px);
+     background: linear-gradient(135deg, #4eba66ff, #c5dbe8ff);
 }
 
 .lab-card h3 {
